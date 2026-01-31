@@ -1,0 +1,130 @@
+{
+  "info": {
+    "_postman_id": "fb09bd2c-6b32-4635-8beb-d10132182774",
+    "name": "week2.day2",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "2257080",
+    "_collection_link": "https://go.postman.co/collection/2257080-fb09bd2c-6b32-4635-8beb-d10132182774?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "create_a_new_record_in_incident_table_with_request_body",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 201\", function () {\r",
+              "    pm.response.to.have.status(201);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Status code name has Created\", function () {\r",
+              "    pm.response.to.have.status(\"Created\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Validate response should be in JSON format\", function () {    \r",
+              "    pm.expect(pm.response.headers.get(\"Content-Type\")).contains('application/json');\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response time is less than 2500ms\", function () {\r",
+              "    pm.expect(pm.response.responseTime).to.be.below(2500);\r",
+              "});\r",
+              "\r",
+              "var jsonData = pm.response.json();\r",
+              "var sysID = jsonData.result.sys_id;\r",
+              "\r",
+              "pm.collectionVariables.set(\"sysID\", sysID);"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"short_description\": \"{{shortDescription}}\",\r\n    \"description\": \"{{Description}}\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{protocal}}://{{baseUrl}}/{{basePath}}/:table_name",
+          "protocol": "{{protocal}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "{{basePath}}",
+            ":table_name"
+          ],
+          "variable": [
+            {
+              "key": "table_name",
+              "value": "{{tableName}}"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "password",
+        "value": "{{password}}",
+        "type": "string"
+      },
+      {
+        "key": "username",
+        "value": "{{username}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "basePath",
+      "value": "api/now/table"
+    },
+    {
+      "key": "tableName",
+      "value": "incident"
+    },
+    {
+      "key": "sysID",
+      "value": ""
+    }
+  ]
+}
