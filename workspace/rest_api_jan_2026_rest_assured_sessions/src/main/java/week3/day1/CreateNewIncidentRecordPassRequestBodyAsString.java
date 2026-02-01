@@ -9,7 +9,8 @@ public class CreateNewIncidentRecordPassRequestBodyAsString {
 	static String requestBody = """
 			                    {
                                   "short_description": "APISESSIONFEB26",
-                                  "description": "Create new record based on POST method"
+                                  "description": "Create new record based on POST method",
+                                  "category": "software"
                                 }
 			                    """;
 
