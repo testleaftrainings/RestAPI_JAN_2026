@@ -1,0 +1,16 @@
+{
+	"name": "Harry",
+	"job": "Manager",
+	"salary": 89000.00,
+	"empAddress": {
+	    "state": "Maharastra",
+	    "city": "Pune",
+	    "pincode": 700044
+	},
+	"banks":[
+        "HDFC",
+        "ICICI",
+        "SBI"
+	],
+	"married": false
+}

@@ -19,6 +19,16 @@
 			<artifactId>testng</artifactId>
 			<version>7.12.0</version>
 		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>7.34.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>7.34.2</version>
+		</dependency>
 	</dependencies>	
 	<build>
 		<plugins>
@@ -28,8 +38,8 @@
 				<version>1.2.2</version>
 				<configuration>
 				    <sourceType>json</sourceType>
-					<sourceDirectory>${basedir}/src/main/resources/request_body</sourceDirectory>
-					<targetPackage>week3.day2.pojos</targetPackage>
+					<sourceDirectory>${basedir}/src/main/resources/servicenow</sourceDirectory>
+					<targetPackage>week4.day1.servicenow.pojos</targetPackage>
 					<outputDirectory>${basedir}/src/main/java</outputDirectory>
 					<annotationStyle>gson</annotationStyle>
 					<includeHashcodeAndEquals>false</includeHashcodeAndEquals>

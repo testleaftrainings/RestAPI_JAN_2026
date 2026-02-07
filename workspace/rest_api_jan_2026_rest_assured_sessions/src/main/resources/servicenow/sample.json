@@ -1,0 +1,22 @@
+{
+    "result": [
+        {
+            "sys_id": "46e3e949a9fe19810069b824ba2c761a",
+            "active": "true",
+            "state": "2",
+            "category": "hardware"
+        },
+        {
+            "sys_id": "46f09e75a9fe198100f4ffd8d366d17b",
+            "active": "true",
+            "state": "2",
+            "category": "hardware"
+        },
+        {
+            "sys_id": "471eb058a9fe198100f89592e1ea93d3",
+            "active": "true",
+            "state": "2",
+            "category": "hardware"
+        }
+    ]
+}
