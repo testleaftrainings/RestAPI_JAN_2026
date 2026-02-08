@@ -3,6 +3,20 @@
 	<groupId>com.rest.api.jan.2026.rest.assured.sessions</groupId>
 	<artifactId>rest_api_jan_2026_rest_assured_sessions</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<allure.version>2.24.0</allure.version>
+	</properties>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.qameta.allure</groupId>
+				<artifactId>allure-bom</artifactId>
+				<version>${allure.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	<dependencies>
 		<dependency>
 			<groupId>io.rest-assured</groupId>
@@ -28,6 +42,11 @@
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-testng</artifactId>
 			<version>7.34.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>	
 	<build>
