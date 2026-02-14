@@ -16,8 +16,7 @@ public class IncidentService {
 	public void createIncident(RequestSpecBuilder requestSpecBuilder) {
 		response = given()
 		 .spec(requestSpecBuilder.build())
-		 .header("Content-Type", "application/json")
-		 .log().all()
+		 .header("Content-Type", "application/json")		 
 		 .when()		 
 		 .post("/{table_name}");
 	}
@@ -34,8 +33,7 @@ public class IncidentService {
 		response = given()
 		 .spec(requestSpecBuilder.build())
 		 .pathParam("sys_id", sysId)
-		 .header("Content-Type", "application/json")
-		 .log().all()
+		 .header("Content-Type", "application/json")		 
 		.when()
 		 .body(pojoClass)
 		 .put("/{table_name}/{sys_id}");

@@ -1,0 +1,54 @@
+package com.testleaf.matschie.servicenow.serialization.pojos;
+
+import com.google.gson.annotations.SerializedName;
+
+public class UpdateRecordPayload {
+
+	private String description;
+	@SerializedName(value = "short_description")
+	private String shortDescription;
+	private String category;
+	private String state;
+	private String impact;
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getShortDescription() {
+		return shortDescription;
+	}
+
+	public void setShortDescription(String shortDescription) {
+		this.shortDescription = shortDescription;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getImpact() {
+		return impact;
+	}
+
+	public void setImpact(String impact) {
+		this.impact = impact;
+	}	
+
+}

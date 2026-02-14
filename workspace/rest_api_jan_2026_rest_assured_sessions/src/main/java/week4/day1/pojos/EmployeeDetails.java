@@ -22,11 +22,9 @@ public class EmployeeDetails {
     @SerializedName("empAddress")
     @Expose
     private EmpAddress empAddress;
-    @SerializedName("banks")
-    @Expose
+    @SerializedName("banks")    
     private List<String> banks = new ArrayList<String>();
-    @SerializedName("married")
-    @Expose
+    @SerializedName("married")    
     private Boolean married;
 
     public String getName() {

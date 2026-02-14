@@ -19,8 +19,8 @@ public class GenerateJsonUsingPojo {
 		
 		employeeDetails.setName("Harry");
 		employeeDetails.setJob("Manager");
-		employeeDetails.setSalary(0.00);
-		empAddress.setState("");
+		employeeDetails.setSalary(80000.00);
+		empAddress.setState("Maharastra");
 		empAddress.setCity("Pune");
 		empAddress.setPincode(700044);
 		employeeDetails.setEmpAddress(empAddress);
@@ -28,6 +28,7 @@ public class GenerateJsonUsingPojo {
 		employeeDetails.setMarried(false);
 		
 		Gson gson = new GsonBuilder()
+				        .excludeFieldsWithoutExposeAnnotation()
 				        .setPrettyPrinting()
 				        .create();
 		

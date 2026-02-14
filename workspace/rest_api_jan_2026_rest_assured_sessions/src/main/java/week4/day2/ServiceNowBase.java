@@ -5,6 +5,7 @@ import static io.restassured.RestAssured.basic;
 import org.testng.annotations.BeforeClass;
 
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.filter.log.RequestLoggingFilter;
 import week3.day2.UpdateIncidentPojo;
 
 public class ServiceNowBase {
@@ -19,6 +20,8 @@ public class ServiceNowBase {
 		requestSpecBuilder.setBasePath("api/now/table");
 		requestSpecBuilder.setAuth(basic("admin", "e5!pRsPN%lH5"));
 		requestSpecBuilder.addPathParam("table_name", "incident");
+		requestSpecBuilder.addFilter(new RequestLoggingFilter());
+		requestSpecBuilder.addFilter(new ErrorResponseLoggingFilter());
 	}
 
 }

@@ -7,7 +7,7 @@ src/main/java
         |____ com.testleaf.matschie.rest.assured.api.client
         |                 |
         |                 |___ RestAssuredApiClient.java
-        |                 |___ RestAssuredListener.java        
+        |                 |___ ErrorResponseLoggingFilter.java        
         |
         |____ com.testleaf.matschie.data.utils
         |                 |

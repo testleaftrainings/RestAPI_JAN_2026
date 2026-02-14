@@ -15,7 +15,7 @@ public class EmpAddress {
     @Expose
     private String city;
     @SerializedName("pincode")
-    @Expose(serialize = true)
+    @Expose(serialize = false)
     private Integer pincode;
 
     public String getState() {
